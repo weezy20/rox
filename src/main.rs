@@ -4,7 +4,15 @@ use color_eyre::eyre::Result;
 fn main() -> Result<()>{
     color_eyre::install()?;
     if let Some(config_file_path) = std::env::args().nth(1) {
-        Rox::interpret(&config_file_path);
+        let rox = Rox::interpret(&config_file_path)?;
+        println!("**Printing Name Value pairs**");
+        for item in rox.switches {
+            println!("{:?}", item);
+        }
+        println!("**Printing comments**");
+        for comment in rox.comments {
+            println!("{}", comment);
+        }
     }
     else {
         eprintln!("Usage: `rox {{rox file}}`");
