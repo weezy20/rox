@@ -9,8 +9,8 @@ fn main() -> Result<()>{
         for item in rox.switches {
             println!("{:?}", item);
         }
-        println!("**Printing comments**");
-        for comment in rox.comments {
+        println!("**Printing invalid**");
+        for comment in rox.invalid {
             println!("{}", comment);
         }
     }

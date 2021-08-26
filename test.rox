@@ -4,7 +4,10 @@
 # program. Blank lines are also ignored by the application program.
 
 # This is the fullname parameter
-FULLNAME Foo Barber
+# Notice that there are two whitespaces b/w Foo and Barber
+# which happen to be parsed
+
+FULLNAME Foo  Barber
 
 # This is a favourite fruit
 FAVOURITEFRUIT banana
